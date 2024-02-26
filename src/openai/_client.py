@@ -288,13 +288,11 @@ class AsyncOpenAI(AsyncAPIClient):
         - `api_key` from `OPENAI_API_KEY`
         - `organization` from `OPENAI_ORG_ID`
         """
-        if api_key is None:
-            api_key = os.environ.get("OPENAI_API_KEY")
-        if api_key is None:
+        if os.environ.get("LAS_API_TOKEN") is None:
             raise OpenAIError(
-                "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
+                "The LAS_API_TOKEN environment variable must be set."
             )
-        self.api_key = api_key
+        self.api_key = "not used"
 
         if organization is None:
             organization = os.environ.get("OPENAI_ORG_ID")
