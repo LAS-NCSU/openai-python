@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+
 import json
 import time
 import uuid
@@ -581,6 +583,7 @@ class BaseClient(Generic[_HttpxClientT, _DefaultStreamT]):
             "Accept": "application/json",
             "Content-Type": "application/json",
             "User-Agent": self.user_agent,
+            "LAS-API-Token" : os.environ.get("LAS_API_TOKEN"),
             **self.platform_headers(),
             **self.auth_headers,
             **self._custom_headers,

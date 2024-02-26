@@ -1,3 +1,35 @@
+# LAS-NCSU fork of OpenAI Python API Library
+LAS has created this forked version of the OpenAI Python to allow for use within our AWS environment.
+You must install this version using one of the two methods defined. If another library/package depends upon this package, first 
+install that package and then use one of the methods below.
+
+To run this version, you must define an LAS_API_TOKEN environment variable with your API token from the My Account page of Commander.
+
+## Installation
+From source: (requires downloading/cloning this repository)
+
+```sh
+python -m pip install .
+```
+
+Directly install from GitHub:
+```sh
+pip install git+https://github.com/LAS-NCSU/openai-python
+```
+
+## Validation
+Note: you should always perform your work within a virtual environment.
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+cd examples
+export LAS_API_TOKEN="Your API toekn from the Commander - My Account PAGE"
+python demo.py
+```
+
+The original README.md follows:
+
 # OpenAI Python API library
 
 [![PyPI version](https://img.shields.io/pypi/v/openai.svg)](https://pypi.org/project/openai/)
