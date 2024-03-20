@@ -1,5 +1,91 @@
 # Changelog
 
+## 1.14.2 (2024-03-19)
+
+Full Changelog: [v1.14.1...v1.14.2](https://github.com/openai/openai-python/compare/v1.14.1...v1.14.2)
+
+### Performance Improvements
+
+* cache TypeAdapters ([#1114](https://github.com/openai/openai-python/issues/1114)) ([41b6fee](https://github.com/openai/openai-python/commit/41b6feec70d3f203e36ba9a92205389bafce930c))
+* cache TypeAdapters ([#1243](https://github.com/openai/openai-python/issues/1243)) ([2005076](https://github.com/openai/openai-python/commit/2005076f500bef6e0a6cc8f935b9cc9fef65ab5b))
+
+
+### Chores
+
+* **internal:** update generated pragma comment ([#1247](https://github.com/openai/openai-python/issues/1247)) ([3eeb9b3](https://github.com/openai/openai-python/commit/3eeb9b3a71e01c2593be443a97a353371466d01a))
+
+
+### Documentation
+
+* assistant improvements ([#1249](https://github.com/openai/openai-python/issues/1249)) ([e7a3176](https://github.com/openai/openai-python/commit/e7a3176b7606822bd5ad8f7fece87de6aad1e5b6))
+* fix typo in CONTRIBUTING.md ([#1245](https://github.com/openai/openai-python/issues/1245)) ([adef57a](https://github.com/openai/openai-python/commit/adef57ae5c71734873ba49bccd92fa7f28068d28))
+
+## 1.14.1 (2024-03-15)
+
+Full Changelog: [v1.14.0...v1.14.1](https://github.com/openai/openai-python/compare/v1.14.0...v1.14.1)
+
+### Documentation
+
+* **readme:** assistant streaming ([#1238](https://github.com/openai/openai-python/issues/1238)) ([0fc30a2](https://github.com/openai/openai-python/commit/0fc30a23030b4ff60f27cd2f472517926ed0f300))
+
+## 1.14.0 (2024-03-13)
+
+Full Changelog: [v1.13.4...v1.14.0](https://github.com/openai/openai-python/compare/v1.13.4...v1.14.0)
+
+### Features
+
+* **assistants:** add support for streaming ([#1233](https://github.com/openai/openai-python/issues/1233)) ([17635dc](https://github.com/openai/openai-python/commit/17635dccbeddf153f8201dbca18b44e16a1799b2))
+
+## 1.13.4 (2024-03-13)
+
+Full Changelog: [v1.13.3...v1.13.4](https://github.com/openai/openai-python/compare/v1.13.3...v1.13.4)
+
+### Bug Fixes
+
+* **streaming:** improve error messages ([#1218](https://github.com/openai/openai-python/issues/1218)) ([4f5ff29](https://github.com/openai/openai-python/commit/4f5ff298601b5a8bfbf0a9d0c0d1329d1502a205))
+
+
+### Chores
+
+* **api:** update docs ([#1212](https://github.com/openai/openai-python/issues/1212)) ([71236e0](https://github.com/openai/openai-python/commit/71236e0de4012a249af4c1ffd95973a8ba4fa61f))
+* **client:** improve error message for invalid http_client argument ([#1216](https://github.com/openai/openai-python/issues/1216)) ([d0c928a](https://github.com/openai/openai-python/commit/d0c928abbd99020fe828350f3adfd10c638a2eed))
+* **docs:** mention install from git repo ([#1203](https://github.com/openai/openai-python/issues/1203)) ([3ab6f44](https://github.com/openai/openai-python/commit/3ab6f447ffd8d2394e58416e401e545a99ec85af))
+* export NOT_GIVEN sentinel value ([#1223](https://github.com/openai/openai-python/issues/1223)) ([8a4f76f](https://github.com/openai/openai-python/commit/8a4f76f992c66f20cd6aa070c8dc4839e4cf9f3c))
+* **internal:** add core support for deserializing into number response ([#1219](https://github.com/openai/openai-python/issues/1219)) ([004bc92](https://github.com/openai/openai-python/commit/004bc924ea579852b9266ca11aea93463cf75104))
+* **internal:** bump pyright ([#1221](https://github.com/openai/openai-python/issues/1221)) ([3c2e815](https://github.com/openai/openai-python/commit/3c2e815311ace4ff81ccd446b23ff50a4e099485))
+* **internal:** improve deserialisation of discriminated unions ([#1227](https://github.com/openai/openai-python/issues/1227)) ([4767259](https://github.com/openai/openai-python/commit/4767259d25ac135550b37b15e4c0497e5ff0330d))
+* **internal:** minor core client restructuring ([#1199](https://github.com/openai/openai-python/issues/1199)) ([4314cdc](https://github.com/openai/openai-python/commit/4314cdcd522537e6cbbd87206d5bb236f672ce05))
+* **internal:** split up transforms into sync / async ([#1210](https://github.com/openai/openai-python/issues/1210)) ([7853a83](https://github.com/openai/openai-python/commit/7853a8358864957cc183581bdf7c03810a7b2756))
+* **internal:** support more input types ([#1211](https://github.com/openai/openai-python/issues/1211)) ([d0e4baa](https://github.com/openai/openai-python/commit/d0e4baa40d32c2da0ce5ceef8e0c7193b98f2b5a))
+* **internal:** support parsing Annotated types ([#1222](https://github.com/openai/openai-python/issues/1222)) ([8598f81](https://github.com/openai/openai-python/commit/8598f81841eeab0ab00eb21fdec7e8756ffde909))
+* **types:** include discriminators in unions ([#1228](https://github.com/openai/openai-python/issues/1228)) ([3ba0dcc](https://github.com/openai/openai-python/commit/3ba0dcc19a2af0ef869c77da2805278f71ee96c2))
+
+
+### Documentation
+
+* **contributing:** improve wording ([#1201](https://github.com/openai/openai-python/issues/1201)) ([95a1e0e](https://github.com/openai/openai-python/commit/95a1e0ea8e5446c413606847ebf9e35afbc62bf9))
+
+## 1.13.3 (2024-02-28)
+
+Full Changelog: [v1.13.2...v1.13.3](https://github.com/openai/openai-python/compare/v1.13.2...v1.13.3)
+
+### Features
+
+* **api:** add wav and pcm to response_format ([#1189](https://github.com/openai/openai-python/issues/1189)) ([dbd20fc](https://github.com/openai/openai-python/commit/dbd20fc42e93358261f71b9aa0e5f955053c3825))
+
+
+### Chores
+
+* **client:** use anyio.sleep instead of asyncio.sleep ([#1198](https://github.com/openai/openai-python/issues/1198)) ([b6d025b](https://github.com/openai/openai-python/commit/b6d025b54f091e79f5d4a0a8923f29574fd66027))
+* **internal:** bump pyright ([#1193](https://github.com/openai/openai-python/issues/1193)) ([9202e04](https://github.com/openai/openai-python/commit/9202e04d07a7c47232f39196346c734869b8f55a))
+* **types:** extract run status to a named type ([#1178](https://github.com/openai/openai-python/issues/1178)) ([249ecbd](https://github.com/openai/openai-python/commit/249ecbdeb6566a385ec46dfd5000b4eaa03965f0))
+
+
+### Documentation
+
+* add note in azure_deployment docstring ([#1188](https://github.com/openai/openai-python/issues/1188)) ([96fa995](https://github.com/openai/openai-python/commit/96fa99572dd76ee708f2bae04d11b659cdd698b2))
+* **examples:** add pyaudio streaming example ([#1194](https://github.com/openai/openai-python/issues/1194)) ([3683c5e](https://github.com/openai/openai-python/commit/3683c5e3c7f07e4b789a0c4cc417b2c59539cae2))
+
 ## 1.13.2 (2024-02-20)
 
 Full Changelog: [v1.13.1...v1.13.2](https://github.com/openai/openai-python/compare/v1.13.1...v1.13.2)
