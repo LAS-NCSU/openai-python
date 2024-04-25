@@ -10,7 +10,7 @@ import pytest
 from openai import OpenAI, AsyncOpenAI
 from tests.utils import assert_matches_type
 from openai.pagination import SyncCursorPage, AsyncCursorPage
-from openai.types.beta.threads import Message
+from openai.types.beta.threads.message import Message
 
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
@@ -36,15 +36,15 @@ class TestMessages:
             attachments=[
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
             ],
             metadata={},
@@ -265,15 +265,15 @@ class TestAsyncMessages:
             attachments=[
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
                 {
                     "file_id": "string",
-                    "tools": ["file_search", "code_interpreter"],
+                    "tools": [{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
                 },
             ],
             metadata={},

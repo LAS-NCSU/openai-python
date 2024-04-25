@@ -1,5 +1,51 @@
 # Changelog
 
+## 1.23.6 (2024-04-25)
+
+Full Changelog: [v1.23.5...v1.23.6](https://github.com/openai/openai-python/compare/v1.23.5...v1.23.6)
+
+### Chores
+
+* **internal:** update test helper function ([#1371](https://github.com/openai/openai-python/issues/1371)) ([6607c4a](https://github.com/openai/openai-python/commit/6607c4a491fd1912f9222d6fe464ccef6e865eac))
+
+## 1.23.5 (2024-04-24)
+
+Full Changelog: [v1.23.4...v1.23.5](https://github.com/openai/openai-python/compare/v1.23.4...v1.23.5)
+
+### Chores
+
+* **internal:** use actions/checkout@v4 for codeflow ([#1368](https://github.com/openai/openai-python/issues/1368)) ([d1edf8b](https://github.com/openai/openai-python/commit/d1edf8beb806ebaefdcc2cb6e39f99e1811a2668))
+
+## 1.23.4 (2024-04-24)
+
+Full Changelog: [v1.23.3...v1.23.4](https://github.com/openai/openai-python/compare/v1.23.3...v1.23.4)
+
+### Bug Fixes
+
+* **api:** change timestamps to unix integers ([#1367](https://github.com/openai/openai-python/issues/1367)) ([fbc0e15](https://github.com/openai/openai-python/commit/fbc0e15f422971bd15499d4ea5f42a1c885c7004))
+* **docs:** doc improvements ([#1364](https://github.com/openai/openai-python/issues/1364)) ([8c3a005](https://github.com/openai/openai-python/commit/8c3a005247ea045b9a95e7459eba2a90067daf71))
+
+
+### Chores
+
+* **tests:** rename test file ([#1366](https://github.com/openai/openai-python/issues/1366)) ([4204e63](https://github.com/openai/openai-python/commit/4204e63e27584c68ad27825261225603d7a87008))
+
+## 1.23.3 (2024-04-23)
+
+Full Changelog: [v1.23.2...v1.23.3](https://github.com/openai/openai-python/compare/v1.23.2...v1.23.3)
+
+### Chores
+
+* **internal:** restructure imports ([#1359](https://github.com/openai/openai-python/issues/1359)) ([4e5eb37](https://github.com/openai/openai-python/commit/4e5eb374ea0545a6117db657bb05f6417bc62d18))
+
+## 1.23.2 (2024-04-19)
+
+Full Changelog: [v1.23.1...v1.23.2](https://github.com/openai/openai-python/compare/v1.23.1...v1.23.2)
+
+### Bug Fixes
+
+* **api:** correct types for message attachment tools ([#1348](https://github.com/openai/openai-python/issues/1348)) ([78a6261](https://github.com/openai/openai-python/commit/78a6261eaad7839284903287d4f647d9cb4ced0b))
+
 ## 1.23.1 (2024-04-18)
 
 Full Changelog: [v1.23.0...v1.23.1](https://github.com/openai/openai-python/compare/v1.23.0...v1.23.1)
