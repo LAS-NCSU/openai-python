@@ -28,6 +28,9 @@ export LAS_API_TOKEN="Your API toekn from the Commander - My Account PAGE"
 python demo.py
 ```
 
+## OpenAI API Tokens,
+By default, LAS users map to the same API token. This shared token can cause issues with uploaded files and sessions interfering with each other. Please post a message in the #i2i channel on Slack for your own OpenAI token.
+
 The original README.md follows:
 
 # OpenAI Python API library
