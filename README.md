@@ -28,8 +28,13 @@ export LAS_API_TOKEN="Your API toekn from the Commander - My Account PAGE"
 python demo.py
 ```
 
-## OpenAI API Tokens,
+## OpenAI API Tokens
 By default, LAS users map to the same API token. This shared token can cause issues with uploaded files and sessions interfering with each other. Please post a message in the #i2i channel on Slack for your own OpenAI token.
+
+We can also track API usage by projects.  Post a message in the #i2i channel to set up your project. When instantiating the OpenAI client, you will need to include the OpenAI organization and project values.
+```
+client = OpenAI(default_headers={"OpenAI-Organization": "", "OpenAI-Project": ""})
+```
 
 The original README.md follows:
 
