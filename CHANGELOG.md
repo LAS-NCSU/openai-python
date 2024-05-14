@@ -1,5 +1,74 @@
 # Changelog
 
+## 1.30.1 (2024-05-14)
+
+Full Changelog: [v1.30.0...v1.30.1](https://github.com/openai/openai-python/compare/v1.30.0...v1.30.1)
+
+### Chores
+
+* **internal:** add slightly better logging to scripts ([#1422](https://github.com/openai/openai-python/issues/1422)) ([43dffab](https://github.com/openai/openai-python/commit/43dffabb3bed4edf8a6e523cbb289f733a5f9b24))
+
+## 1.30.0 (2024-05-14)
+
+Full Changelog: [v1.29.0...v1.30.0](https://github.com/openai/openai-python/compare/v1.29.0...v1.30.0)
+
+### Features
+
+* **api:** add incomplete state ([#1420](https://github.com/openai/openai-python/issues/1420)) ([6484984](https://github.com/openai/openai-python/commit/648498412d1c7740e6b67ed4d0a55b89ff29d3b1))
+
+## 1.29.0 (2024-05-13)
+
+Full Changelog: [v1.28.2...v1.29.0](https://github.com/openai/openai-python/compare/v1.28.2...v1.29.0)
+
+### Features
+
+* **api:** add gpt-4o model ([#1417](https://github.com/openai/openai-python/issues/1417)) ([4f09f8c](https://github.com/openai/openai-python/commit/4f09f8c6cc4450f5e61f158f1bd54c513063a1a8))
+
+## 1.28.2 (2024-05-13)
+
+Full Changelog: [v1.28.1...v1.28.2](https://github.com/openai/openai-python/compare/v1.28.1...v1.28.2)
+
+### Bug Fixes
+
+* **client:** accidental blocking sleep in async code ([#1415](https://github.com/openai/openai-python/issues/1415)) ([0ac6ecb](https://github.com/openai/openai-python/commit/0ac6ecb8d4e52f895bc3ae1f589f22ddaaef6204))
+
+
+### Chores
+
+* **internal:** bump pydantic dependency ([#1413](https://github.com/openai/openai-python/issues/1413)) ([ed73d1d](https://github.com/openai/openai-python/commit/ed73d1db540714e29a1ba30e3aa6429aae8b1dd8))
+
+## 1.28.1 (2024-05-11)
+
+Full Changelog: [v1.28.0...v1.28.1](https://github.com/openai/openai-python/compare/v1.28.0...v1.28.1)
+
+### Chores
+
+* **docs:** add SECURITY.md ([#1408](https://github.com/openai/openai-python/issues/1408)) ([119970a](https://github.com/openai/openai-python/commit/119970a31b67e88c623d50855290ccf3847c10eb))
+
+## 1.28.0 (2024-05-09)
+
+Full Changelog: [v1.27.0...v1.28.0](https://github.com/openai/openai-python/compare/v1.27.0...v1.28.0)
+
+### Features
+
+* **api:** add message image content ([#1405](https://github.com/openai/openai-python/issues/1405)) ([a115de6](https://github.com/openai/openai-python/commit/a115de60ce1ca503a7659bb9a19c18699d4d9bcb))
+
+## 1.27.0 (2024-05-08)
+
+Full Changelog: [v1.26.0...v1.27.0](https://github.com/openai/openai-python/compare/v1.26.0...v1.27.0)
+
+### Features
+
+* **api:** adding file purposes ([#1401](https://github.com/openai/openai-python/issues/1401)) ([2e9d0bd](https://github.com/openai/openai-python/commit/2e9d0bd0e4bf677ed9b21c6448e804313e026441))
+
+## 1.26.0 (2024-05-06)
+
+Full Changelog: [v1.25.2...v1.26.0](https://github.com/openai/openai-python/compare/v1.25.2...v1.26.0)
+
+### Features
+
+* **api:** add usage metadata when streaming ([#1395](https://github.com/openai/openai-python/issues/1395)) ([3cb064b](https://github.com/openai/openai-python/commit/3cb064b10d661dbcc74b6bc1ed7d8e635ab2876a))
+
 ## 1.25.2 (2024-05-05)
 
 Full Changelog: [v1.25.1...v1.25.2](https://github.com/openai/openai-python/compare/v1.25.1...v1.25.2)
