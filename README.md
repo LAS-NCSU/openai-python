@@ -36,6 +36,10 @@ We can also track API usage by projects.  Post a message in the #i2i channel to 
 client = OpenAI(default_headers={"OpenAI-Organization": "", "OpenAI-Project": ""})
 ```
 
+Note: If you use another API such as langchain that explicitly checks for the presence of the `OPENAI_API_KEY` environment variable, just create an environment variable to a dummy value. It will be automatically 
+replaced as that library (and others) use this version and the request flow through our API proxy.
+
+
 The original README.md follows:
 
 # OpenAI Python API library
