@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.30.5 (2024-05-29)
+
+Full Changelog: [v1.30.4...v1.30.5](https://github.com/openai/openai-python/compare/v1.30.4...v1.30.5)
+
+### Chores
+
+* **internal:** fix lint issue ([35a1e80](https://github.com/openai/openai-python/commit/35a1e806891c34d5cc13ac8341751e5b15b52319))
+
+## 1.30.4 (2024-05-28)
+
+Full Changelog: [v1.30.3...v1.30.4](https://github.com/openai/openai-python/compare/v1.30.3...v1.30.4)
+
+### Chores
+
+* add missing __all__ definitions ([7fba60f](https://github.com/openai/openai-python/commit/7fba60f2e8adc26e83080aaf3e436eb9891e1253))
+* **internal:** fix lint issue ([f423cd0](https://github.com/openai/openai-python/commit/f423cd05d33b3e734eda7c0c008faac14ae96bb7))
+
 ## 1.30.3 (2024-05-24)
 
 Full Changelog: [v1.30.2...v1.30.3](https://github.com/openai/openai-python/compare/v1.30.2...v1.30.3)
