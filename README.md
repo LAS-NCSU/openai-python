@@ -33,7 +33,7 @@ By default, LAS users map to the same API token. This shared token can cause iss
 
 We can also track API usage by projects.  Post a message in the #i2i channel to set up your project. When instantiating the OpenAI client, you will need to include the OpenAI organization and project values.
 ```
-client = OpenAI(default_headers={"OpenAI-Organization": "", "OpenAI-Project": ""})
+client = OpenAI(organization="", project="")
 ```
 
 Note: If you use another API such as langchain that explicitly checks for the presence of the `OPENAI_API_KEY` environment variable, just create an environment variable to a dummy value. It will be automatically 
