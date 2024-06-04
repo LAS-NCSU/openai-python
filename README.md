@@ -14,11 +14,11 @@ python -m pip install .
 
 Directly install from GitHub:
 ```sh
-pip install git+https://github.com/LAS-NCSU/openai-python
+python -m pip install git+https://github.com/LAS-NCSU/openai-python
 ```
 
 ## Validation
-Note: you should always perform your work within a virtual environment.
+Note: You should always perform your work in a virtual environment. The following commands assume you have downloaded this repository and are in the same directory as this README.
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
