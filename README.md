@@ -24,7 +24,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install .
 cd examples
-export LAS_API_TOKEN="Your API toekn from the Commander - My Account PAGE"
+export LAS_API_TOKEN="Your API token from the Commander - My Account PAGE"
 python demo.py
 ```
 
