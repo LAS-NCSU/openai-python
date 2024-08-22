@@ -6,6 +6,7 @@ import os
 from typing import Any, cast
 
 import pytest
+import pydantic
 
 from openai import OpenAI, AsyncOpenAI
 from tests.utils import assert_matches_type
@@ -28,7 +29,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         )
         assert_matches_type(ChatCompletion, completion, path=["response"])
 
@@ -42,13 +43,13 @@ class TestCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             frequency_penalty=-2,
             function_call="none",
             functions=[
                 {
-                    "description": "string",
-                    "name": "string",
+                    "name": "name",
+                    "description": "description",
                     "parameters": {"foo": "bar"},
                 }
             ],
@@ -58,7 +59,7 @@ class TestCompletions:
             n=1,
             parallel_tool_calls=True,
             presence_penalty=-2,
-            response_format={"type": "json_object"},
+            response_format={"type": "text"},
             seed=-9007199254740991,
             service_tier="auto",
             stop="string",
@@ -68,28 +69,31 @@ class TestCompletions:
             tool_choice="none",
             tools=[
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
             ],
             top_logprobs=0,
@@ -107,7 +111,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         )
 
         assert response.is_closed is True
@@ -124,7 +128,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -143,7 +147,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         )
         completion_stream.response.close()
@@ -158,14 +162,14 @@ class TestCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
             frequency_penalty=-2,
             function_call="none",
             functions=[
                 {
-                    "description": "string",
-                    "name": "string",
+                    "name": "name",
+                    "description": "description",
                     "parameters": {"foo": "bar"},
                 }
             ],
@@ -175,7 +179,7 @@ class TestCompletions:
             n=1,
             parallel_tool_calls=True,
             presence_penalty=-2,
-            response_format={"type": "json_object"},
+            response_format={"type": "text"},
             seed=-9007199254740991,
             service_tier="auto",
             stop="string",
@@ -184,28 +188,31 @@ class TestCompletions:
             tool_choice="none",
             tools=[
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
             ],
             top_logprobs=0,
@@ -223,7 +230,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         )
 
@@ -240,7 +247,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         ) as response:
             assert not response.is_closed
@@ -250,6 +257,23 @@ class TestCompletions:
             stream.close()
 
         assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    def test_method_create_disallows_pydantic(self, client: OpenAI) -> None:
+        class MyModel(pydantic.BaseModel):
+            a: str
+
+        with pytest.raises(TypeError, match=r"You tried to pass a `BaseModel` class"):
+            client.chat.completions.create(
+                messages=[
+                    {
+                        "content": "string",
+                        "role": "system",
+                    }
+                ],
+                model="gpt-4o",
+                response_format=cast(Any, MyModel),
+            )
 
 
 class TestAsyncCompletions:
@@ -264,7 +288,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         )
         assert_matches_type(ChatCompletion, completion, path=["response"])
 
@@ -278,13 +302,13 @@ class TestAsyncCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             frequency_penalty=-2,
             function_call="none",
             functions=[
                 {
-                    "description": "string",
-                    "name": "string",
+                    "name": "name",
+                    "description": "description",
                     "parameters": {"foo": "bar"},
                 }
             ],
@@ -294,7 +318,7 @@ class TestAsyncCompletions:
             n=1,
             parallel_tool_calls=True,
             presence_penalty=-2,
-            response_format={"type": "json_object"},
+            response_format={"type": "text"},
             seed=-9007199254740991,
             service_tier="auto",
             stop="string",
@@ -304,28 +328,31 @@ class TestAsyncCompletions:
             tool_choice="none",
             tools=[
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
             ],
             top_logprobs=0,
@@ -343,7 +370,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         )
 
         assert response.is_closed is True
@@ -360,7 +387,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -379,7 +406,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         )
         await completion_stream.response.aclose()
@@ -394,14 +421,14 @@ class TestAsyncCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
             frequency_penalty=-2,
             function_call="none",
             functions=[
                 {
-                    "description": "string",
-                    "name": "string",
+                    "name": "name",
+                    "description": "description",
                     "parameters": {"foo": "bar"},
                 }
             ],
@@ -411,7 +438,7 @@ class TestAsyncCompletions:
             n=1,
             parallel_tool_calls=True,
             presence_penalty=-2,
-            response_format={"type": "json_object"},
+            response_format={"type": "text"},
             seed=-9007199254740991,
             service_tier="auto",
             stop="string",
@@ -420,28 +447,31 @@ class TestAsyncCompletions:
             tool_choice="none",
             tools=[
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
                 {
-                    "type": "function",
                     "function": {
-                        "description": "string",
-                        "name": "string",
+                        "name": "name",
+                        "description": "description",
                         "parameters": {"foo": "bar"},
+                        "strict": True,
                     },
+                    "type": "function",
                 },
             ],
             top_logprobs=0,
@@ -459,7 +489,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         )
 
@@ -476,7 +506,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-4-turbo",
+            model="gpt-4o",
             stream=True,
         ) as response:
             assert not response.is_closed
@@ -486,3 +516,20 @@ class TestAsyncCompletions:
             await stream.close()
 
         assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    async def test_method_create_disallows_pydantic(self, async_client: AsyncOpenAI) -> None:
+        class MyModel(pydantic.BaseModel):
+            a: str
+
+        with pytest.raises(TypeError, match=r"You tried to pass a `BaseModel` class"):
+            await async_client.chat.completions.create(
+                messages=[
+                    {
+                        "content": "string",
+                        "role": "system",
+                    }
+                ],
+                model="gpt-4o",
+                response_format=cast(Any, MyModel),
+            )

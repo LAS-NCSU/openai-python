@@ -1,5 +1,5 @@
 import json
-from typing import cast
+from typing import Any, Union, cast
 from typing_extensions import Annotated
 
 import httpx
@@ -12,8 +12,7 @@ from openai._base_client import FinalRequestOptions
 from openai._legacy_response import LegacyAPIResponse
 
 
-class PydanticModel(pydantic.BaseModel):
-    ...
+class PydanticModel(pydantic.BaseModel): ...
 
 
 def test_response_parse_mismatched_basemodel(client: OpenAI) -> None:
@@ -82,3 +81,23 @@ def test_response_parse_annotated_type(client: OpenAI) -> None:
     )
     assert obj.foo == "hello!"
     assert obj.bar == 2
+
+
+class OtherModel(pydantic.BaseModel):
+    a: str
+
+
+@pytest.mark.parametrize("client", [False], indirect=True)  # loose validation
+def test_response_parse_expect_model_union_non_json_content(client: OpenAI) -> None:
+    response = LegacyAPIResponse(
+        raw=httpx.Response(200, content=b"foo", headers={"Content-Type": "application/text"}),
+        client=client,
+        stream=False,
+        stream_cls=None,
+        cast_to=str,
+        options=FinalRequestOptions.construct(method="get", url="/foo"),
+    )
+
+    obj = response.parse(to=cast(Any, Union[CustomModel, OtherModel]))
+    assert isinstance(obj, str)
+    assert obj == "foo"

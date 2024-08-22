@@ -38,8 +38,8 @@ class TestRuns:
             additional_instructions="string",
             additional_messages=[
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -69,8 +69,8 @@ class TestRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -100,8 +100,8 @@ class TestRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -135,9 +135,9 @@ class TestRuns:
             max_completion_tokens=256,
             max_prompt_tokens=256,
             metadata={},
-            model="gpt-4-turbo",
+            model="gpt-4o",
             parallel_tool_calls=True,
-            response_format="none",
+            response_format="auto",
             stream=False,
             temperature=1,
             tool_choice="none",
@@ -202,8 +202,8 @@ class TestRuns:
             additional_instructions="string",
             additional_messages=[
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -233,8 +233,8 @@ class TestRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -264,8 +264,8 @@ class TestRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -299,9 +299,9 @@ class TestRuns:
             max_completion_tokens=256,
             max_prompt_tokens=256,
             metadata={},
-            model="gpt-4-turbo",
+            model="gpt-4o",
             parallel_tool_calls=True,
-            response_format="none",
+            response_format="auto",
             temperature=1,
             tool_choice="none",
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
@@ -567,16 +567,16 @@ class TestRuns:
             thread_id="string",
             tool_outputs=[
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
             ],
             stream=False,
@@ -704,8 +704,8 @@ class TestAsyncRuns:
             additional_instructions="string",
             additional_messages=[
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -735,8 +735,8 @@ class TestAsyncRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -766,8 +766,8 @@ class TestAsyncRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -801,9 +801,9 @@ class TestAsyncRuns:
             max_completion_tokens=256,
             max_prompt_tokens=256,
             metadata={},
-            model="gpt-4-turbo",
+            model="gpt-4o",
             parallel_tool_calls=True,
-            response_format="none",
+            response_format="auto",
             stream=False,
             temperature=1,
             tool_choice="none",
@@ -868,8 +868,8 @@ class TestAsyncRuns:
             additional_instructions="string",
             additional_messages=[
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -899,8 +899,8 @@ class TestAsyncRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -930,8 +930,8 @@ class TestAsyncRuns:
                     "metadata": {},
                 },
                 {
-                    "role": "user",
                     "content": "string",
+                    "role": "user",
                     "attachments": [
                         {
                             "file_id": "string",
@@ -965,9 +965,9 @@ class TestAsyncRuns:
             max_completion_tokens=256,
             max_prompt_tokens=256,
             metadata={},
-            model="gpt-4-turbo",
+            model="gpt-4o",
             parallel_tool_calls=True,
-            response_format="none",
+            response_format="auto",
             temperature=1,
             tool_choice="none",
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
@@ -1233,16 +1233,16 @@ class TestAsyncRuns:
             thread_id="string",
             tool_outputs=[
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
                 },
             ],
             stream=False,
