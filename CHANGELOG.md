@@ -1,5 +1,57 @@
 # Changelog
 
+## 1.45.0 (2024-09-12)
+
+Full Changelog: [v1.44.1...v1.45.0](https://github.com/openai/openai-python/compare/v1.44.1...v1.45.0)
+
+### Features
+
+* **api:** add o1 models ([#1708](https://github.com/openai/openai-python/issues/1708)) ([06bd42e](https://github.com/openai/openai-python/commit/06bd42e77121a6abd4826a79ce1848812d956576))
+* **errors:** include completion in LengthFinishReasonError ([#1701](https://github.com/openai/openai-python/issues/1701)) ([b0e3256](https://github.com/openai/openai-python/commit/b0e32562aff9aceafec994d3b047f7c2a9f11524))
+
+
+### Bug Fixes
+
+* **types:** correctly mark stream discriminator as optional ([#1706](https://github.com/openai/openai-python/issues/1706)) ([80f02f9](https://github.com/openai/openai-python/commit/80f02f9e5f83fac9cd2f4172b733a92ad01399b2))
+
+## 1.44.1 (2024-09-09)
+
+Full Changelog: [v1.44.0...v1.44.1](https://github.com/openai/openai-python/compare/v1.44.0...v1.44.1)
+
+### Chores
+
+* add docstrings to raw response properties ([#1696](https://github.com/openai/openai-python/issues/1696)) ([1d2a19b](https://github.com/openai/openai-python/commit/1d2a19b0e8acab54c35ef2171d33321943488fdc))
+
+
+### Documentation
+
+* **readme:** add section on determining installed version ([#1697](https://github.com/openai/openai-python/issues/1697)) ([0255735](https://github.com/openai/openai-python/commit/0255735930d9c657c78e85e7f03fd1eb98a1e378))
+* **readme:** improve custom `base_url` example ([#1694](https://github.com/openai/openai-python/issues/1694)) ([05eec8a](https://github.com/openai/openai-python/commit/05eec8a0b7fcdc8651021f2e685214a353b861d1))
+
+## 1.44.0 (2024-09-06)
+
+Full Changelog: [v1.43.1...v1.44.0](https://github.com/openai/openai-python/compare/v1.43.1...v1.44.0)
+
+### Features
+
+* **vector store:** improve chunking strategy type names ([#1690](https://github.com/openai/openai-python/issues/1690)) ([e82cd85](https://github.com/openai/openai-python/commit/e82cd85ac4962e36cb3b139c503069b56918688f))
+
+## 1.43.1 (2024-09-05)
+
+Full Changelog: [v1.43.0...v1.43.1](https://github.com/openai/openai-python/compare/v1.43.0...v1.43.1)
+
+### Chores
+
+* pyproject.toml formatting changes ([#1687](https://github.com/openai/openai-python/issues/1687)) ([3387ede](https://github.com/openai/openai-python/commit/3387ede0b896788bf1197378b01941c75bd6e179))
+
+## 1.43.0 (2024-08-29)
+
+Full Changelog: [v1.42.0...v1.43.0](https://github.com/openai/openai-python/compare/v1.42.0...v1.43.0)
+
+### Features
+
+* **api:** add file search result details to run steps ([#1681](https://github.com/openai/openai-python/issues/1681)) ([f5449c0](https://github.com/openai/openai-python/commit/f5449c07580ac9707f0387f86f4772fbf0a874b6))
+
 ## 1.42.0 (2024-08-20)
 
 Full Changelog: [v1.41.1...v1.42.0](https://github.com/openai/openai-python/compare/v1.41.1...v1.42.0)
