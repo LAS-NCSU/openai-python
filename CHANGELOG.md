@@ -1,5 +1,65 @@
 # Changelog
 
+## 1.53.1 (2024-11-04)
+
+Full Changelog: [v1.53.0...v1.53.1](https://github.com/openai/openai-python/compare/v1.53.0...v1.53.1)
+
+### Bug Fixes
+
+* don't use dicts as iterables in transform ([#1842](https://github.com/openai/openai-python/issues/1842)) ([258f265](https://github.com/openai/openai-python/commit/258f26535744ab3b2f0746991fd29eae72ebd667))
+* support json safe serialization for basemodel subclasses ([#1844](https://github.com/openai/openai-python/issues/1844)) ([2b80c90](https://github.com/openai/openai-python/commit/2b80c90c21d3b2468dfa3bf40c08c5b0e0eebffa))
+
+
+### Chores
+
+* **internal:** bump mypy ([#1839](https://github.com/openai/openai-python/issues/1839)) ([d92f959](https://github.com/openai/openai-python/commit/d92f959aa6f49be56574b4d1d1ac5ac48689dd46))
+
+## 1.53.0 (2024-10-30)
+
+Full Changelog: [v1.52.2...v1.53.0](https://github.com/openai/openai-python/compare/v1.52.2...v1.53.0)
+
+### Features
+
+* **api:** add new, expressive voices for Realtime and Audio in Chat Completions ([7cf0a49](https://github.com/openai/openai-python/commit/7cf0a4958e4c985bef4d18bb919fa3948f389a82))
+
+
+### Chores
+
+* **internal:** bump pytest to v8 & pydantic ([#1829](https://github.com/openai/openai-python/issues/1829)) ([0e67a8a](https://github.com/openai/openai-python/commit/0e67a8af5daf9da029d2bd4bdf341cc8a494254a))
+
+## 1.52.2 (2024-10-23)
+
+Full Changelog: [v1.52.1...v1.52.2](https://github.com/openai/openai-python/compare/v1.52.1...v1.52.2)
+
+### Chores
+
+* **internal:** update spec version ([#1816](https://github.com/openai/openai-python/issues/1816)) ([c23282a](https://github.com/openai/openai-python/commit/c23282a328c48af90a88673ff5f6cc7a866f8758))
+
+## 1.52.1 (2024-10-22)
+
+Full Changelog: [v1.52.0...v1.52.1](https://github.com/openai/openai-python/compare/v1.52.0...v1.52.1)
+
+### Bug Fixes
+
+* **client/async:** correctly retry in all cases ([#1803](https://github.com/openai/openai-python/issues/1803)) ([9fe3f3f](https://github.com/openai/openai-python/commit/9fe3f3f925e06769b7ef6abbf1314a5e82749b4a))
+
+
+### Chores
+
+* **internal:** bump ruff dependency ([#1801](https://github.com/openai/openai-python/issues/1801)) ([859c672](https://github.com/openai/openai-python/commit/859c6725865f1b3285698f68693f9491d511f7ea))
+* **internal:** remove unused black config ([#1807](https://github.com/openai/openai-python/issues/1807)) ([112dab0](https://github.com/openai/openai-python/commit/112dab0290342654265db612c37d327d652251bb))
+* **internal:** update spec version ([#1810](https://github.com/openai/openai-python/issues/1810)) ([aa25b7b](https://github.com/openai/openai-python/commit/aa25b7b88823836b418a63da59491f5f3842773c))
+* **internal:** update test syntax ([#1798](https://github.com/openai/openai-python/issues/1798)) ([d3098dd](https://github.com/openai/openai-python/commit/d3098dd0b9fbe627c21a8ad39c119d125b7cdb54))
+* **tests:** add more retry tests ([#1806](https://github.com/openai/openai-python/issues/1806)) ([5525a1b](https://github.com/openai/openai-python/commit/5525a1ba536058ecc13411e1f98e88f7ec4bf8b9))
+
+## 1.52.0 (2024-10-17)
+
+Full Changelog: [v1.51.2...v1.52.0](https://github.com/openai/openai-python/compare/v1.51.2...v1.52.0)
+
+### Features
+
+* **api:** add gpt-4o-audio-preview model for chat completions ([#1796](https://github.com/openai/openai-python/issues/1796)) ([fbf1e0c](https://github.com/openai/openai-python/commit/fbf1e0c25c4d163f06b61a43d1a94ce001033a7b))
+
 ## 1.51.2 (2024-10-08)
 
 Full Changelog: [v1.51.1...v1.51.2](https://github.com/openai/openai-python/compare/v1.51.1...v1.51.2)
