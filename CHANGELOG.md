@@ -1,5 +1,42 @@
 # Changelog
 
+## 1.56.2 (2024-12-04)
+
+Full Changelog: [v1.56.1...v1.56.2](https://github.com/openai/openai-python/compare/v1.56.1...v1.56.2)
+
+### Chores
+
+* make the `Omit` type public ([#1919](https://github.com/openai/openai-python/issues/1919)) ([4fb8a1c](https://github.com/openai/openai-python/commit/4fb8a1cf1f8df37ce8c027bbaaac85a648bae02a))
+
+## 1.56.1 (2024-12-03)
+
+Full Changelog: [v1.56.0...v1.56.1](https://github.com/openai/openai-python/compare/v1.56.0...v1.56.1)
+
+### Bug Fixes
+
+* **cli:** remove usage of httpx proxies ([0e9fc3d](https://github.com/openai/openai-python/commit/0e9fc3dfbc7dec5b8c8f84dea9d87aad9f3d9cf6))
+
+
+### Chores
+
+* **internal:** bump pyright ([#1917](https://github.com/openai/openai-python/issues/1917)) ([0e87346](https://github.com/openai/openai-python/commit/0e8734637666ab22bc27fe4ec2cf7c39fddb5d08))
+
+## 1.56.0 (2024-12-02)
+
+Full Changelog: [v1.55.3...v1.56.0](https://github.com/openai/openai-python/compare/v1.55.3...v1.56.0)
+
+### Features
+
+* **client:** make ChatCompletionStreamState public ([#1898](https://github.com/openai/openai-python/issues/1898)) ([dc7f6cb](https://github.com/openai/openai-python/commit/dc7f6cb2618686ff04bfdca228913cda3d320884))
+
+## 1.55.3 (2024-11-28)
+
+Full Changelog: [v1.55.2...v1.55.3](https://github.com/openai/openai-python/compare/v1.55.2...v1.55.3)
+
+### Bug Fixes
+
+* **client:** compat with new httpx 0.28.0 release ([#1904](https://github.com/openai/openai-python/issues/1904)) ([72b6c63](https://github.com/openai/openai-python/commit/72b6c636c526885ef873580a07eff1c18e76bc10))
+
 ## 1.55.2 (2024-11-27)
 
 Full Changelog: [v1.55.1...v1.55.2](https://github.com/openai/openai-python/compare/v1.55.1...v1.55.2)
