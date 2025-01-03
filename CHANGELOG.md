@@ -1,5 +1,122 @@
 # Changelog
 
+## 1.59.2 (2025-01-03)
+
+Full Changelog: [v1.59.1...v1.59.2](https://github.com/openai/openai-python/compare/v1.59.1...v1.59.2)
+
+### Chores
+
+* **ci:** fix publish workflow ([0be1f5d](https://github.com/openai/openai-python/commit/0be1f5de0daf807cece564abf061c8bb188bb9aa))
+* **internal:** empty commit ([fe8dc2e](https://github.com/openai/openai-python/commit/fe8dc2e97fc430ea2433ed28cfaa79425af223ec))
+
+## 1.59.1 (2025-01-02)
+
+Full Changelog: [v1.59.0...v1.59.1](https://github.com/openai/openai-python/compare/v1.59.0...v1.59.1)
+
+### Chores
+
+* bump license year ([#1981](https://github.com/openai/openai-python/issues/1981)) ([f29011a](https://github.com/openai/openai-python/commit/f29011a6426d3fa4844ecd723ee20561ee60c665))
+
+## 1.59.0 (2024-12-21)
+
+Full Changelog: [v1.58.1...v1.59.0](https://github.com/openai/openai-python/compare/v1.58.1...v1.59.0)
+
+### Features
+
+* **azure:** support for the Realtime API ([#1963](https://github.com/openai/openai-python/issues/1963)) ([9fda141](https://github.com/openai/openai-python/commit/9fda14172abdb66fe240aa7b4dc7cfae4faf1d73))
+
+
+### Chores
+
+* **realtime:** update docstrings ([#1964](https://github.com/openai/openai-python/issues/1964)) ([3dee863](https://github.com/openai/openai-python/commit/3dee863554d28272103e90a6a199ac196e92ff05))
+
+## 1.58.1 (2024-12-17)
+
+Full Changelog: [v1.58.0...v1.58.1](https://github.com/openai/openai-python/compare/v1.58.0...v1.58.1)
+
+### Documentation
+
+* **readme:** fix example script link ([23ba877](https://github.com/openai/openai-python/commit/23ba8778fd55e0f54f36685e9c5950b452d8e10c))
+
+## 1.58.0 (2024-12-17)
+
+Full Changelog: [v1.57.4...v1.58.0](https://github.com/openai/openai-python/compare/v1.57.4...v1.58.0)
+
+### Features
+
+* add Realtime API support ([#1958](https://github.com/openai/openai-python/issues/1958)) ([97d73cf](https://github.com/openai/openai-python/commit/97d73cf89935ca6098bb889a92f0ec2cdff16989))
+* **api:** new o1 and GPT-4o models + preference fine-tuning ([#1956](https://github.com/openai/openai-python/issues/1956)) ([ec22ffb](https://github.com/openai/openai-python/commit/ec22ffb129c524525caa33b088405d27c271e631))
+
+
+### Bug Fixes
+
+* add reasoning_effort to all methods ([8829c32](https://github.com/openai/openai-python/commit/8829c3202dbe790ca3646476c802ec55ed47d864))
+* **assistants:** correctly send `include` query param ([9a4c69c](https://github.com/openai/openai-python/commit/9a4c69c383bc6719b6521a485f2c7e62a9c036a9))
+* **cli/migrate:** change grit binaries prefix ([#1951](https://github.com/openai/openai-python/issues/1951)) ([1c396c9](https://github.com/openai/openai-python/commit/1c396c95b040fb3d1a2523b09eaad4ff62d96846))
+
+
+### Chores
+
+* **internal:** fix some typos ([#1955](https://github.com/openai/openai-python/issues/1955)) ([628dead](https://github.com/openai/openai-python/commit/628dead660c00435bf46e09081c7b90b7bbe4a8a))
+
+
+### Documentation
+
+* add examples + guidance on Realtime API support ([1cb00f8](https://github.com/openai/openai-python/commit/1cb00f8fed78052aacbb9e0fac997b6ba0d44d2a))
+* **readme:** example snippet for client context manager ([#1953](https://github.com/openai/openai-python/issues/1953)) ([ad80255](https://github.com/openai/openai-python/commit/ad802551d8aaf4e6eff711118676ec4e64392638))
+
+## 1.57.4 (2024-12-13)
+
+Full Changelog: [v1.57.3...v1.57.4](https://github.com/openai/openai-python/compare/v1.57.3...v1.57.4)
+
+### Chores
+
+* **internal:** remove some duplicated imports ([#1946](https://github.com/openai/openai-python/issues/1946)) ([f94fddd](https://github.com/openai/openai-python/commit/f94fddd377015764b3c82919fdf956f619447b77))
+* **internal:** updated imports ([#1948](https://github.com/openai/openai-python/issues/1948)) ([13971fc](https://github.com/openai/openai-python/commit/13971fc450106746c0ae02ab931e68b770ee105e))
+
+## 1.57.3 (2024-12-12)
+
+Full Changelog: [v1.57.2...v1.57.3](https://github.com/openai/openai-python/compare/v1.57.2...v1.57.3)
+
+### Chores
+
+* **internal:** add support for TypeAliasType ([#1942](https://github.com/openai/openai-python/issues/1942)) ([d3442ff](https://github.com/openai/openai-python/commit/d3442ff28f2394200e14122f683d1f94686e8231))
+* **internal:** bump pyright ([#1939](https://github.com/openai/openai-python/issues/1939)) ([190d1a8](https://github.com/openai/openai-python/commit/190d1a805dee7c37fb8f9dcb93b1715caa06cf95))
+
+## 1.57.2 (2024-12-10)
+
+Full Changelog: [v1.57.1...v1.57.2](https://github.com/openai/openai-python/compare/v1.57.1...v1.57.2)
+
+### Bug Fixes
+
+* **azure:** handle trailing slash in `azure_endpoint` ([#1935](https://github.com/openai/openai-python/issues/1935)) ([69b73c5](https://github.com/openai/openai-python/commit/69b73c553b1982277c2f1b9d110ed951ddca689e))
+
+
+### Documentation
+
+* **readme:** fix http client proxies example ([#1932](https://github.com/openai/openai-python/issues/1932)) ([7a83e0f](https://github.com/openai/openai-python/commit/7a83e0fe4cc29e484ae417448b002c997745e4a3))
+
+## 1.57.1 (2024-12-09)
+
+Full Changelog: [v1.57.0...v1.57.1](https://github.com/openai/openai-python/compare/v1.57.0...v1.57.1)
+
+### Chores
+
+* **internal:** bump pydantic dependency ([#1929](https://github.com/openai/openai-python/issues/1929)) ([5227c95](https://github.com/openai/openai-python/commit/5227c95eff9c7b1395e6d8f14b94652a91ed2ee2))
+
+## 1.57.0 (2024-12-05)
+
+Full Changelog: [v1.56.2...v1.57.0](https://github.com/openai/openai-python/compare/v1.56.2...v1.57.0)
+
+### Features
+
+* **api:** updates ([#1924](https://github.com/openai/openai-python/issues/1924)) ([82ba614](https://github.com/openai/openai-python/commit/82ba6144682b0a6b3a22d4f764231c0c6afdcf6e))
+
+
+### Chores
+
+* bump openapi url ([#1922](https://github.com/openai/openai-python/issues/1922)) ([a472a8f](https://github.com/openai/openai-python/commit/a472a8fd0ba36b6897dcd02b6005fcf23f98f056))
+
 ## 1.56.2 (2024-12-04)
 
 Full Changelog: [v1.56.1...v1.56.2](https://github.com/openai/openai-python/compare/v1.56.1...v1.56.2)
