@@ -1,5 +1,101 @@
 # Changelog
 
+## 1.60.1 (2025-01-24)
+
+Full Changelog: [v1.60.0...v1.60.1](https://github.com/openai/openai-python/compare/v1.60.0...v1.60.1)
+
+### Chores
+
+* **internal:** minor formatting changes ([#2050](https://github.com/openai/openai-python/issues/2050)) ([9c44192](https://github.com/openai/openai-python/commit/9c44192be5776d9252d36dc027a33c60b33d81b2))
+
+
+### Documentation
+
+* **examples/azure:** add async snippet ([#1787](https://github.com/openai/openai-python/issues/1787)) ([f60eda1](https://github.com/openai/openai-python/commit/f60eda1c1e8caf0ec2274b18b3fb2252304196db))
+
+## 1.60.0 (2025-01-22)
+
+Full Changelog: [v1.59.9...v1.60.0](https://github.com/openai/openai-python/compare/v1.59.9...v1.60.0)
+
+### Features
+
+* **api:** update enum values, comments, and examples ([#2045](https://github.com/openai/openai-python/issues/2045)) ([e8205fd](https://github.com/openai/openai-python/commit/e8205fd58f0d677f476c577a8d9afb90f5710506))
+
+
+### Chores
+
+* **internal:** minor style changes ([#2043](https://github.com/openai/openai-python/issues/2043)) ([89a9dd8](https://github.com/openai/openai-python/commit/89a9dd821eaf5300ad11b0270b61fdfa4fd6e9b6))
+
+
+### Documentation
+
+* **readme:** mention failed requests in request IDs ([5f7c30b](https://github.com/openai/openai-python/commit/5f7c30bc006ffb666c324011a68aae357cb33e35))
+
+## 1.59.9 (2025-01-20)
+
+Full Changelog: [v1.59.8...v1.59.9](https://github.com/openai/openai-python/compare/v1.59.8...v1.59.9)
+
+### Bug Fixes
+
+* **tests:** make test_get_platform less flaky ([#2040](https://github.com/openai/openai-python/issues/2040)) ([72ea05c](https://github.com/openai/openai-python/commit/72ea05cf18caaa7a5e6fe7e2251ab93fa0ba3140))
+
+
+### Chores
+
+* **internal:** avoid pytest-asyncio deprecation warning ([#2041](https://github.com/openai/openai-python/issues/2041)) ([b901046](https://github.com/openai/openai-python/commit/b901046ddda9c79b7f019e2263c02d126a3b2ee2))
+* **internal:** update websockets dep ([#2036](https://github.com/openai/openai-python/issues/2036)) ([642cd11](https://github.com/openai/openai-python/commit/642cd119482c6fbca925ba702ad2579f9dc47bf9))
+
+
+### Documentation
+
+* fix typo ([#2031](https://github.com/openai/openai-python/issues/2031)) ([02fcf15](https://github.com/openai/openai-python/commit/02fcf15611953089826a74725cb96201d94658bb))
+* **raw responses:** fix duplicate `the` ([#2039](https://github.com/openai/openai-python/issues/2039)) ([9b8eab9](https://github.com/openai/openai-python/commit/9b8eab99fdc6a581a1f5cc421c6f74b0e2b30415))
+
+## 1.59.8 (2025-01-17)
+
+Full Changelog: [v1.59.7...v1.59.8](https://github.com/openai/openai-python/compare/v1.59.7...v1.59.8)
+
+### Bug Fixes
+
+* streaming ([c16f58e](https://github.com/openai/openai-python/commit/c16f58ead0bc85055b164182689ba74b7e939dfa))
+* **structured outputs:** avoid parsing empty empty content ([#2023](https://github.com/openai/openai-python/issues/2023)) ([6d3513c](https://github.com/openai/openai-python/commit/6d3513c86f6e5800f8f73a45e089b7a205327121))
+* **structured outputs:** correct schema coercion for inline ref expansion ([#2025](https://github.com/openai/openai-python/issues/2025)) ([2f4f0b3](https://github.com/openai/openai-python/commit/2f4f0b374207f162060c328b71ec995049dc42e8))
+* **types:** correct type for vector store chunking strategy ([#2017](https://github.com/openai/openai-python/issues/2017)) ([e389279](https://github.com/openai/openai-python/commit/e38927950a5cdad99065853fe7b72aad6bb322e9))
+
+
+### Chores
+
+* **examples:** update realtime model ([f26746c](https://github.com/openai/openai-python/commit/f26746cbcd893d66cf8a3fd68a7c3779dc8c833c)), closes [#2020](https://github.com/openai/openai-python/issues/2020)
+* **internal:** bump pyright dependency ([#2021](https://github.com/openai/openai-python/issues/2021)) ([0a9a0f5](https://github.com/openai/openai-python/commit/0a9a0f5d8b9d5457643798287f893305006dd518))
+* **internal:** streaming refactors ([#2012](https://github.com/openai/openai-python/issues/2012)) ([d76a748](https://github.com/openai/openai-python/commit/d76a748f606743407f94dfc26758095560e2082a))
+* **internal:** update deps ([#2015](https://github.com/openai/openai-python/issues/2015)) ([514e0e4](https://github.com/openai/openai-python/commit/514e0e415f87ab4510262d29ed6125384e017b84))
+
+
+### Documentation
+
+* **examples/azure:** example script with realtime API ([#1967](https://github.com/openai/openai-python/issues/1967)) ([84f2f9c](https://github.com/openai/openai-python/commit/84f2f9c0439229a7db7136fe78419292d34d1f81))
+
+## 1.59.7 (2025-01-13)
+
+Full Changelog: [v1.59.6...v1.59.7](https://github.com/openai/openai-python/compare/v1.59.6...v1.59.7)
+
+### Chores
+
+* export HttpxBinaryResponseContent class ([7191b71](https://github.com/openai/openai-python/commit/7191b71f3dcbbfcb2f2bec855c3bba93c956384e))
+
+## 1.59.6 (2025-01-09)
+
+Full Changelog: [v1.59.5...v1.59.6](https://github.com/openai/openai-python/compare/v1.59.5...v1.59.6)
+
+### Bug Fixes
+
+* correctly handle deserialising `cls` fields ([#2002](https://github.com/openai/openai-python/issues/2002)) ([089c820](https://github.com/openai/openai-python/commit/089c820c8a5d20e9db6a171f0a4f11b481fe8465))
+
+
+### Chores
+
+* **internal:** spec update ([#2000](https://github.com/openai/openai-python/issues/2000)) ([36548f8](https://github.com/openai/openai-python/commit/36548f871763fdd7b5ce44903d186bc916331549))
+
 ## 1.59.5 (2025-01-08)
 
 Full Changelog: [v1.59.4...v1.59.5](https://github.com/openai/openai-python/compare/v1.59.4...v1.59.5)
