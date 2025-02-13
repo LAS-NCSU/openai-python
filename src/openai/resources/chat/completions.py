@@ -28,6 +28,7 @@ from ...types.chat import (
 from ..._base_client import make_request_options
 from ...types.chat_model import ChatModel
 from ...types.chat.chat_completion import ChatCompletion
+from ...types.shared_params.metadata import Metadata
 from ...types.chat.chat_completion_chunk import ChatCompletionChunk
 from ...types.chat.chat_completion_modality import ChatCompletionModality
 from ...types.chat.chat_completion_tool_param import ChatCompletionToolParam
@@ -75,13 +76,13 @@ class Completions(SyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -179,8 +180,12 @@ class Completions(SyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -208,7 +213,7 @@ class Completions(SyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -246,9 +251,9 @@ class Completions(SyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -324,13 +329,13 @@ class Completions(SyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -434,8 +439,12 @@ class Completions(SyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -463,7 +472,7 @@ class Completions(SyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -501,9 +510,9 @@ class Completions(SyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -572,13 +581,13 @@ class Completions(SyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -682,8 +691,12 @@ class Completions(SyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -711,7 +724,7 @@ class Completions(SyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -749,9 +762,9 @@ class Completions(SyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -819,13 +832,13 @@ class Completions(SyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -927,13 +940,13 @@ class AsyncCompletions(AsyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -1031,8 +1044,12 @@ class AsyncCompletions(AsyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -1060,7 +1077,7 @@ class AsyncCompletions(AsyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -1098,9 +1115,9 @@ class AsyncCompletions(AsyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -1176,13 +1193,13 @@ class AsyncCompletions(AsyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -1286,8 +1303,12 @@ class AsyncCompletions(AsyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -1315,7 +1336,7 @@ class AsyncCompletions(AsyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -1353,9 +1374,9 @@ class AsyncCompletions(AsyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -1424,13 +1445,13 @@ class AsyncCompletions(AsyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
@@ -1534,8 +1555,12 @@ class AsyncCompletions(AsyncAPIResource):
               compatible with
               [o1 series models](https://platform.openai.com/docs/guides/reasoning).
 
-          metadata: Developer-defined tags and values used for filtering completions in the
-              [dashboard](https://platform.openai.com/chat-completions).
+          metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
+              for storing additional information about the object in a structured format, and
+              querying for objects via API or the dashboard.
+
+              Keys are strings with a maximum length of 64 characters. Values are strings with
+              a maximum length of 512 characters.
 
           modalities: Output types that you would like the model to generate for this request. Most
               models are capable of generating text, which is the default:
@@ -1563,7 +1588,7 @@ class AsyncCompletions(AsyncAPIResource):
               whether they appear in the text so far, increasing the model's likelihood to
               talk about new topics.
 
-          reasoning_effort: **o1 models only**
+          reasoning_effort: **o1 and o3-mini models only**
 
               Constrains effort on reasoning for
               [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
@@ -1601,9 +1626,9 @@ class AsyncCompletions(AsyncAPIResource):
                 utilize scale tier credits until they are exhausted.
               - If set to 'auto', and the Project is not Scale tier enabled, the request will
                 be processed using the default service tier with a lower uptime SLA and no
-                latency guarentee.
+                latency guarantee.
               - If set to 'default', the request will be processed using the default service
-                tier with a lower uptime SLA and no latency guarentee.
+                tier with a lower uptime SLA and no latency guarantee.
               - When not set, the default behavior is 'auto'.
 
           stop: Up to 4 sequences where the API will stop generating further tokens.
@@ -1671,13 +1696,13 @@ class AsyncCompletions(AsyncAPIResource):
         logprobs: Optional[bool] | NotGiven = NOT_GIVEN,
         max_completion_tokens: Optional[int] | NotGiven = NOT_GIVEN,
         max_tokens: Optional[int] | NotGiven = NOT_GIVEN,
-        metadata: Optional[Dict[str, str]] | NotGiven = NOT_GIVEN,
+        metadata: Optional[Metadata] | NotGiven = NOT_GIVEN,
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
         prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
-        reasoning_effort: ChatCompletionReasoningEffort | NotGiven = NOT_GIVEN,
+        reasoning_effort: Optional[ChatCompletionReasoningEffort] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,

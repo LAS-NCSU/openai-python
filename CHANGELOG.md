@@ -1,5 +1,75 @@
 # Changelog
 
+## 1.62.0 (2025-02-12)
+
+Full Changelog: [v1.61.1...v1.62.0](https://github.com/openai/openai-python/compare/v1.61.1...v1.62.0)
+
+### Features
+
+* **client:** send `X-Stainless-Read-Timeout` header ([#2094](https://github.com/openai/openai-python/issues/2094)) ([0288213](https://github.com/openai/openai-python/commit/0288213fbfa935c9bf9d56416619ea929ae1cf63))
+* **embeddings:** use stdlib array type for improved performance ([#2060](https://github.com/openai/openai-python/issues/2060)) ([9a95db9](https://github.com/openai/openai-python/commit/9a95db9154ac98678970e7f1652a7cacfd2f7fdb))
+* **pagination:** avoid fetching when has_more: false ([#2098](https://github.com/openai/openai-python/issues/2098)) ([1882483](https://github.com/openai/openai-python/commit/18824832d3a676ae49206cd2b5e09d4796fdf033))
+
+
+### Bug Fixes
+
+* **api:** add missing reasoning effort + model enums ([#2096](https://github.com/openai/openai-python/issues/2096)) ([e0ca9f0](https://github.com/openai/openai-python/commit/e0ca9f0f6fae40230f8cab97573914ed632920b6))
+* **parsing:** don't default to an empty array ([#2106](https://github.com/openai/openai-python/issues/2106)) ([8e748bb](https://github.com/openai/openai-python/commit/8e748bb08d9c0d1f7e8a1af31452e25eb7154f55))
+
+
+### Chores
+
+* **internal:** fix type traversing dictionary params ([#2097](https://github.com/openai/openai-python/issues/2097)) ([4e5b368](https://github.com/openai/openai-python/commit/4e5b368bf576f38d0f125778edde74ed6d101d7d))
+* **internal:** minor type handling changes ([#2099](https://github.com/openai/openai-python/issues/2099)) ([a2c6da0](https://github.com/openai/openai-python/commit/a2c6da0fbc610ee80a2e044a0b20fc1cc2376962))
+
+## 1.61.1 (2025-02-05)
+
+Full Changelog: [v1.61.0...v1.61.1](https://github.com/openai/openai-python/compare/v1.61.0...v1.61.1)
+
+### Bug Fixes
+
+* **api/types:** correct audio duration & role types ([#2091](https://github.com/openai/openai-python/issues/2091)) ([afcea48](https://github.com/openai/openai-python/commit/afcea4891ff85de165ccc2b5497ccf9a90520e9e))
+* **cli/chat:** only send params when set ([#2077](https://github.com/openai/openai-python/issues/2077)) ([688b223](https://github.com/openai/openai-python/commit/688b223d9a733d241d50e5d7df62f346592c537c))
+
+
+### Chores
+
+* **internal:** bummp ruff dependency ([#2080](https://github.com/openai/openai-python/issues/2080)) ([b7a80b1](https://github.com/openai/openai-python/commit/b7a80b1994ab86e81485b88531e4aea63b3da594))
+* **internal:** change default timeout to an int ([#2079](https://github.com/openai/openai-python/issues/2079)) ([d3df1c6](https://github.com/openai/openai-python/commit/d3df1c6ca090598701e38fd376a9796aadba88f1))
+
+## 1.61.0 (2025-01-31)
+
+Full Changelog: [v1.60.2...v1.61.0](https://github.com/openai/openai-python/compare/v1.60.2...v1.61.0)
+
+### Features
+
+* **api:** add o3-mini ([#2067](https://github.com/openai/openai-python/issues/2067)) ([12b87a4](https://github.com/openai/openai-python/commit/12b87a4a1e6cb071a6b063d089585dec56a5d534))
+
+
+### Bug Fixes
+
+* **types:** correct metadata type + other fixes ([12b87a4](https://github.com/openai/openai-python/commit/12b87a4a1e6cb071a6b063d089585dec56a5d534))
+
+
+### Chores
+
+* **helpers:** section links ([ef8d3cc](https://github.com/openai/openai-python/commit/ef8d3cce40022d3482d341455be604e5f1afbd70))
+* **types:** fix Metadata types ([82d3156](https://github.com/openai/openai-python/commit/82d3156e74ed2f95edd10cd7ebea53d2b5562794))
+* update api.md ([#2063](https://github.com/openai/openai-python/issues/2063)) ([21964f0](https://github.com/openai/openai-python/commit/21964f00fb104011c4c357544114702052b74548))
+
+
+### Documentation
+
+* **readme:** current section links ([#2055](https://github.com/openai/openai-python/issues/2055)) ([ef8d3cc](https://github.com/openai/openai-python/commit/ef8d3cce40022d3482d341455be604e5f1afbd70))
+
+## 1.60.2 (2025-01-27)
+
+Full Changelog: [v1.60.1...v1.60.2](https://github.com/openai/openai-python/compare/v1.60.1...v1.60.2)
+
+### Bug Fixes
+
+* **parsing:** don't validate input tools in the asynchronous `.parse()` method ([6fcfe73](https://github.com/openai/openai-python/commit/6fcfe73cd335853c7dd2cd3151a0d5d1785cfc9c))
+
 ## 1.60.1 (2025-01-24)
 
 Full Changelog: [v1.60.0...v1.60.1](https://github.com/openai/openai-python/compare/v1.60.0...v1.60.1)
