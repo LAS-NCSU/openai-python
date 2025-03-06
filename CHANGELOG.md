@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.65.4 (2025-03-05)
+
+Full Changelog: [v1.65.3...v1.65.4](https://github.com/openai/openai-python/compare/v1.65.3...v1.65.4)
+
+### Bug Fixes
+
+* **api:** add missing file rank enum + more metadata ([#2164](https://github.com/openai/openai-python/issues/2164)) ([0387e48](https://github.com/openai/openai-python/commit/0387e48e0880e496eb74b60eec9ed76a3171f14d))
+
+## 1.65.3 (2025-03-04)
+
+Full Changelog: [v1.65.2...v1.65.3](https://github.com/openai/openai-python/compare/v1.65.2...v1.65.3)
+
+### Chores
+
+* **internal:** remove unused http client options forwarding ([#2158](https://github.com/openai/openai-python/issues/2158)) ([76ec464](https://github.com/openai/openai-python/commit/76ec464cfe3db3fa59a766259d6d6ee5bb889f86))
+* **internal:** run example files in CI ([#2160](https://github.com/openai/openai-python/issues/2160)) ([9979345](https://github.com/openai/openai-python/commit/9979345038594440eec2f500c0c7cc5417cc7c08))
+
+## 1.65.2 (2025-03-01)
+
+Full Changelog: [v1.65.1...v1.65.2](https://github.com/openai/openai-python/compare/v1.65.1...v1.65.2)
+
+### Bug Fixes
+
+* **azure:** azure_deployment use with realtime + non-deployment-based APIs ([#2154](https://github.com/openai/openai-python/issues/2154)) ([5846b55](https://github.com/openai/openai-python/commit/5846b552877f3d278689c521f9a26ce31167e1ea))
+
+
+### Chores
+
+* **docs:** update client docstring ([#2152](https://github.com/openai/openai-python/issues/2152)) ([0518c34](https://github.com/openai/openai-python/commit/0518c341ee0e19941c6b1d9d60e2552e1aa17f26))
+
 ## 1.65.1 (2025-02-27)
 
 Full Changelog: [v1.65.0...v1.65.1](https://github.com/openai/openai-python/compare/v1.65.0...v1.65.1)
