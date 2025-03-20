@@ -2,6 +2,7 @@
 
 ```python
 from openai.types import (
+    AllModels,
     ChatModel,
     ComparisonFilter,
     CompoundFilter,
@@ -14,6 +15,7 @@ from openai.types import (
     ResponseFormatJSONObject,
     ResponseFormatJSONSchema,
     ResponseFormatText,
+    ResponsesModel,
 )
 ```
 
@@ -605,6 +607,8 @@ from openai.types.responses import (
     ResponseCodeInterpreterToolCall,
     ResponseCompletedEvent,
     ResponseComputerToolCall,
+    ResponseComputerToolCallOutputItem,
+    ResponseComputerToolCallOutputScreenshot,
     ResponseContent,
     ResponseContentPartAddedEvent,
     ResponseContentPartDoneEvent,
@@ -621,6 +625,8 @@ from openai.types.responses import (
     ResponseFunctionCallArgumentsDeltaEvent,
     ResponseFunctionCallArgumentsDoneEvent,
     ResponseFunctionToolCall,
+    ResponseFunctionToolCallItem,
+    ResponseFunctionToolCallOutputItem,
     ResponseFunctionWebSearch,
     ResponseInProgressEvent,
     ResponseIncludable,
@@ -632,7 +638,9 @@ from openai.types.responses import (
     ResponseInputImage,
     ResponseInputItem,
     ResponseInputMessageContentList,
+    ResponseInputMessageItem,
     ResponseInputText,
+    ResponseItem,
     ResponseOutputAudio,
     ResponseOutputItem,
     ResponseOutputItemAddedEvent,
@@ -677,4 +685,4 @@ from openai.types.responses import ResponseItemList
 
 Methods:
 
-- <code title="get /responses/{response_id}/input_items">client.responses.input_items.<a href="./src/openai/resources/responses/input_items.py">list</a>(response_id, \*\*<a href="src/openai/types/responses/input_item_list_params.py">params</a>) -> SyncCursorPage[Data]</code>
+- <code title="get /responses/{response_id}/input_items">client.responses.input_items.<a href="./src/openai/resources/responses/input_items.py">list</a>(response_id, \*\*<a href="src/openai/types/responses/input_item_list_params.py">params</a>) -> <a href="./src/openai/types/responses/response_item.py">SyncCursorPage[ResponseItem]</a></code>
