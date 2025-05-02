@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.77.0 (2025-05-02)
+
+Full Changelog: [v1.76.2...v1.77.0](https://github.com/openai/openai-python/compare/v1.76.2...v1.77.0)
+
+### Features
+
+* **api:** add image sizes, reasoning encryption ([473469a](https://github.com/openai/openai-python/commit/473469afa1a5f0a03f727bdcdadb9fd57872f9c5))
+
+
+### Bug Fixes
+
+* **parsing:** handle whitespace only strings ([#2007](https://github.com/openai/openai-python/issues/2007)) ([246bc5b](https://github.com/openai/openai-python/commit/246bc5b7559887840717667a0dad465caef66c3b))
+
+
+### Chores
+
+* only strip leading whitespace ([8467d66](https://github.com/openai/openai-python/commit/8467d666e0ddf1a9f81b8769a5c8a2fef1de20c1))
+
+## 1.76.2 (2025-04-29)
+
+Full Changelog: [v1.76.1...v1.76.2](https://github.com/openai/openai-python/compare/v1.76.1...v1.76.2)
+
+### Chores
+
+* **api:** API spec cleanup ([0a4d3e2](https://github.com/openai/openai-python/commit/0a4d3e2b495d22dd42ce1773b870554c64f9b3b2))
+
 ## 1.76.1 (2025-04-29)
 
 Full Changelog: [v1.76.0...v1.76.1](https://github.com/openai/openai-python/compare/v1.76.0...v1.76.1)
