@@ -1,5 +1,80 @@
 # Changelog
 
+## 1.83.0 (2025-06-02)
+
+Full Changelog: [v1.82.1...v1.83.0](https://github.com/openai/openai-python/compare/v1.82.1...v1.83.0)
+
+### Features
+
+* **api:** Config update for pakrym-stream-param ([88bcf3a](https://github.com/openai/openai-python/commit/88bcf3af9ce8ffa8347547d4d30aacac1ceba939))
+* **client:** add follow_redirects request option ([26d715f](https://github.com/openai/openai-python/commit/26d715f4e9b0f2b19e2ac16acc796a949338e1e1))
+
+
+### Bug Fixes
+
+* **api:** Fix evals and code interpreter interfaces ([2650159](https://github.com/openai/openai-python/commit/2650159f6d01f6eb481cf8c7942142e4fd21ce44))
+* **client:** return binary content from `get /containers/{container_id}/files/{file_id}/content` ([f7c80c4](https://github.com/openai/openai-python/commit/f7c80c4368434bd0be7436375076ba33a62f63b5))
+
+
+### Chores
+
+* **api:** mark some methods as deprecated ([3e2ca57](https://github.com/openai/openai-python/commit/3e2ca571cb6cdd9e15596590605b2f98a4c5a42e))
+* deprecate Assistants API ([9d166d7](https://github.com/openai/openai-python/commit/9d166d795e03dea49af680ec9597e9497522187c))
+* **docs:** remove reference to rye shell ([c7978e9](https://github.com/openai/openai-python/commit/c7978e9f1640c311022988fcd716cbb5c865daa8))
+
+## 1.82.1 (2025-05-29)
+
+Full Changelog: [v1.82.0...v1.82.1](https://github.com/openai/openai-python/compare/v1.82.0...v1.82.1)
+
+### Bug Fixes
+
+* **responses:** don't include `parsed_arguments` when re-serialising ([6d04193](https://github.com/openai/openai-python/commit/6d041937963ce452affcfb3553146ee51acfeb7a))
+
+
+### Chores
+
+* **internal:** fix release workflows ([361a909](https://github.com/openai/openai-python/commit/361a909a0cc83e5029ea425fd72202ffa8d1a46a))
+
+## 1.82.0 (2025-05-22)
+
+Full Changelog: [v1.81.0...v1.82.0](https://github.com/openai/openai-python/compare/v1.81.0...v1.82.0)
+
+### Features
+
+* **api:** new streaming helpers for background responses ([2a65d4d](https://github.com/openai/openai-python/commit/2a65d4de0aaba7801edd0df10f225530fd4969bd))
+
+
+### Bug Fixes
+
+* **azure:** mark images/edits as a deployment endpoint [#2371](https://github.com/openai/openai-python/issues/2371) ([5d1d5b4](https://github.com/openai/openai-python/commit/5d1d5b4b6072afe9fd7909b1a36014c8c11c1ad6))
+
+
+### Documentation
+
+* **readme:** another async example fix ([9ec8289](https://github.com/openai/openai-python/commit/9ec8289041f395805c67efd97847480f84eb9dac))
+* **readme:** fix async example ([37d0b25](https://github.com/openai/openai-python/commit/37d0b25b6e82cd381e5d1aa6e28f1a1311d02353))
+
+## 1.81.0 (2025-05-21)
+
+Full Changelog: [v1.80.0...v1.81.0](https://github.com/openai/openai-python/compare/v1.80.0...v1.81.0)
+
+### Features
+
+* **api:** add container endpoint ([054a210](https://github.com/openai/openai-python/commit/054a210289d7e0db22d2d2a61bbe4d4d9cc0cb47))
+
+## 1.80.0 (2025-05-21)
+
+Full Changelog: [v1.79.0...v1.80.0](https://github.com/openai/openai-python/compare/v1.79.0...v1.80.0)
+
+### Features
+
+* **api:** new API tools ([d36ae52](https://github.com/openai/openai-python/commit/d36ae528d55fe87067c4b8c6b2c947cbad5e5002))
+
+
+### Chores
+
+* **docs:** grammar improvements ([e746145](https://github.com/openai/openai-python/commit/e746145a12b5335d8841aff95c91bbbde8bae8e3))
+
 ## 1.79.0 (2025-05-16)
 
 Full Changelog: [v1.78.1...v1.79.0](https://github.com/openai/openai-python/compare/v1.78.1...v1.79.0)
