@@ -45,7 +45,7 @@ class TestResponses:
             },
             prompt_cache_key="prompt-cache-key-1234",
             reasoning={
-                "effort": "low",
+                "effort": "minimal",
                 "generate_summary": "auto",
                 "summary": "auto",
             },
@@ -53,8 +53,12 @@ class TestResponses:
             service_tier="auto",
             store=True,
             stream=False,
+            stream_options={"include_obfuscation": True},
             temperature=1,
-            text={"format": {"type": "text"}},
+            text={
+                "format": {"type": "text"},
+                "verbosity": "low",
+            },
             tool_choice="none",
             tools=[
                 {
@@ -120,15 +124,19 @@ class TestResponses:
             },
             prompt_cache_key="prompt-cache-key-1234",
             reasoning={
-                "effort": "low",
+                "effort": "minimal",
                 "generate_summary": "auto",
                 "summary": "auto",
             },
             safety_identifier="safety-identifier-1234",
             service_tier="auto",
             store=True,
+            stream_options={"include_obfuscation": True},
             temperature=1,
-            text={"format": {"type": "text"}},
+            text={
+                "format": {"type": "text"},
+                "verbosity": "low",
+            },
             tool_choice="none",
             tools=[
                 {
@@ -181,6 +189,7 @@ class TestResponses:
         response = client.responses.retrieve(
             response_id="resp_677efb5139a88190b512bc3fef8e535d",
             include=["code_interpreter_call.outputs"],
+            include_obfuscation=True,
             starting_after=0,
             stream=False,
         )
@@ -231,6 +240,7 @@ class TestResponses:
             response_id="resp_677efb5139a88190b512bc3fef8e535d",
             stream=True,
             include=["code_interpreter_call.outputs"],
+            include_obfuscation=True,
             starting_after=0,
         )
         response_stream.response.close()
@@ -386,7 +396,7 @@ class TestAsyncResponses:
             },
             prompt_cache_key="prompt-cache-key-1234",
             reasoning={
-                "effort": "low",
+                "effort": "minimal",
                 "generate_summary": "auto",
                 "summary": "auto",
             },
@@ -394,8 +404,12 @@ class TestAsyncResponses:
             service_tier="auto",
             store=True,
             stream=False,
+            stream_options={"include_obfuscation": True},
             temperature=1,
-            text={"format": {"type": "text"}},
+            text={
+                "format": {"type": "text"},
+                "verbosity": "low",
+            },
             tool_choice="none",
             tools=[
                 {
@@ -461,15 +475,19 @@ class TestAsyncResponses:
             },
             prompt_cache_key="prompt-cache-key-1234",
             reasoning={
-                "effort": "low",
+                "effort": "minimal",
                 "generate_summary": "auto",
                 "summary": "auto",
             },
             safety_identifier="safety-identifier-1234",
             service_tier="auto",
             store=True,
+            stream_options={"include_obfuscation": True},
             temperature=1,
-            text={"format": {"type": "text"}},
+            text={
+                "format": {"type": "text"},
+                "verbosity": "low",
+            },
             tool_choice="none",
             tools=[
                 {
@@ -522,6 +540,7 @@ class TestAsyncResponses:
         response = await async_client.responses.retrieve(
             response_id="resp_677efb5139a88190b512bc3fef8e535d",
             include=["code_interpreter_call.outputs"],
+            include_obfuscation=True,
             starting_after=0,
             stream=False,
         )
@@ -572,6 +591,7 @@ class TestAsyncResponses:
             response_id="resp_677efb5139a88190b512bc3fef8e535d",
             stream=True,
             include=["code_interpreter_call.outputs"],
+            include_obfuscation=True,
             starting_after=0,
         )
         await response_stream.response.aclose()

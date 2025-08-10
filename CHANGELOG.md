@@ -1,5 +1,62 @@
 # Changelog
 
+## 1.99.6 (2025-08-09)
+
+Full Changelog: [v1.99.5...v1.99.6](https://github.com/openai/openai-python/compare/v1.99.5...v1.99.6)
+
+### Bug Fixes
+
+* **types:** re-export more tool call types ([8fe5741](https://github.com/openai/openai-python/commit/8fe574131cfe8f0453788cc6105d22834e7c102f))
+
+
+### Chores
+
+* **internal:** update comment in script ([e407bb5](https://github.com/openai/openai-python/commit/e407bb52112ad73e5eedf929434ee4ff7ac5a5a8))
+* update @stainless-api/prism-cli to v5.15.0 ([a1883fc](https://github.com/openai/openai-python/commit/a1883fcdfa02b81e5129bdb43206597a51f885fa))
+
+## 1.99.5 (2025-08-08)
+
+Full Changelog: [v1.99.4...v1.99.5](https://github.com/openai/openai-python/compare/v1.99.4...v1.99.5)
+
+### Bug Fixes
+
+* **client:** fix verbosity parameter location in Responses ([2764ff4](https://github.com/openai/openai-python/commit/2764ff459eb8b309d25b39b40e363b16a5b95019))
+
+## 1.99.4 (2025-08-08)
+
+Full Changelog: [v1.99.3...v1.99.4](https://github.com/openai/openai-python/compare/v1.99.3...v1.99.4)
+
+### Bug Fixes
+
+* **types:** rename chat completion tool ([8d3bf88](https://github.com/openai/openai-python/commit/8d3bf88f5bc11cf30b8b050c24b2cc5a3807614f))
+* **types:** revert ChatCompletionToolParam to a TypedDict ([3f4ae72](https://github.com/openai/openai-python/commit/3f4ae725af53e631ddc128c1c6862ecf0b08e073))
+
+## 1.99.3 (2025-08-07)
+
+Full Changelog: [v1.99.2...v1.99.3](https://github.com/openai/openai-python/compare/v1.99.2...v1.99.3)
+
+### Bug Fixes
+
+* **responses:** add output_text back ([585a4f1](https://github.com/openai/openai-python/commit/585a4f15e5a088bf8afee745bc4a7803775ac283))
+
+## 1.99.2 (2025-08-07)
+
+Full Changelog: [v1.99.1...v1.99.2](https://github.com/openai/openai-python/compare/v1.99.1...v1.99.2)
+
+### Features
+
+* **api:** adds GPT-5 and new API features: platform.openai.com/docs/guides/gpt-5 ([ed370d8](https://github.com/openai/openai-python/commit/ed370d805e4d5d1ec14a136f5b2516751277059f))
+
+
+### Bug Fixes
+
+* **types:** correct tool types ([0c57bd7](https://github.com/openai/openai-python/commit/0c57bd7f2183a20b714d04edea380a4df0464a40))
+
+
+### Chores
+
+* **tests:** bump inline-snapshot dependency ([e236fde](https://github.com/openai/openai-python/commit/e236fde99a335fcaac9760f324e4807ce2cf7cba))
+
 ## 1.99.1 (2025-08-05)
 
 Full Changelog: [v1.99.0...v1.99.1](https://github.com/openai/openai-python/compare/v1.99.0...v1.99.1)
