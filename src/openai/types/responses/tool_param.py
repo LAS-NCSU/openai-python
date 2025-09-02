@@ -11,6 +11,7 @@ from .computer_tool_param import ComputerToolParam
 from .function_tool_param import FunctionToolParam
 from .web_search_tool_param import WebSearchToolParam
 from .file_search_tool_param import FileSearchToolParam
+from .web_search_preview_tool_param import WebSearchPreviewToolParam
 
 __all__ = [
     "ToolParam",
@@ -243,13 +244,14 @@ class LocalShell(TypedDict, total=False):
 ToolParam: TypeAlias = Union[
     FunctionToolParam,
     FileSearchToolParam,
-    WebSearchToolParam,
     ComputerToolParam,
+    WebSearchToolParam,
     Mcp,
     CodeInterpreter,
     ImageGeneration,
     LocalShell,
     CustomToolParam,
+    WebSearchPreviewToolParam,
 ]
 
 
