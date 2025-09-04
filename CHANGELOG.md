@@ -1,5 +1,65 @@
 # Changelog
 
+## 1.106.1 (2025-09-04)
+
+Full Changelog: [v1.106.0...v1.106.1](https://github.com/openai/openai-python/compare/v1.106.0...v1.106.1)
+
+### Chores
+
+* **internal:** move mypy configurations to `pyproject.toml` file ([ca413a2](https://github.com/openai/openai-python/commit/ca413a277496c3b883b103ad1138a886e89ae15e))
+
+## 1.106.0 (2025-09-04)
+
+Full Changelog: [v1.105.0...v1.106.0](https://github.com/openai/openai-python/compare/v1.105.0...v1.106.0)
+
+### Features
+
+* **client:** support callable api_key ([#2588](https://github.com/openai/openai-python/issues/2588)) ([e1bad01](https://github.com/openai/openai-python/commit/e1bad015b8a2b98bfee955a24bc931347a58efc1))
+* improve future compat with pydantic v3 ([6645d93](https://github.com/openai/openai-python/commit/6645d9317a240982928b92c2f4af0381db6edc09))
+
+## 1.105.0 (2025-09-03)
+
+Full Changelog: [v1.104.2...v1.105.0](https://github.com/openai/openai-python/compare/v1.104.2...v1.105.0)
+
+### Features
+
+* **api:** Add gpt-realtime models ([8502041](https://github.com/openai/openai-python/commit/85020414808314df9cb42e020b11baff12f18f16))
+
+## 1.104.2 (2025-09-02)
+
+Full Changelog: [v1.104.1...v1.104.2](https://github.com/openai/openai-python/compare/v1.104.1...v1.104.2)
+
+### Bug Fixes
+
+* **types:** add aliases back for web search tool types ([2521cd8](https://github.com/openai/openai-python/commit/2521cd8445906e418dbae783b0d7c375ad91d49d))
+
+## 1.104.1 (2025-09-02)
+
+Full Changelog: [v1.104.0...v1.104.1](https://github.com/openai/openai-python/compare/v1.104.0...v1.104.1)
+
+### Chores
+
+* **api:** manual updates for ResponseInputAudio ([0db5061](https://github.com/openai/openai-python/commit/0db50619663656ba97bba30ab640bbb33683d196))
+
+## 1.104.0 (2025-09-02)
+
+Full Changelog: [v1.103.0...v1.104.0](https://github.com/openai/openai-python/compare/v1.103.0...v1.104.0)
+
+### Features
+
+* **types:** replace List[str] with SequenceNotStr in params ([bc00bda](https://github.com/openai/openai-python/commit/bc00bda880a80089be8a1758c016266ca72dab2c))
+
+
+### Bug Fixes
+
+* **types:** update more types to use SequenceNotStr ([cff135c](https://github.com/openai/openai-python/commit/cff135cb7059ef1bf8f9b101a83529fc0cee37c4))
+* **types:** update some types to SequenceNotStr ([03f8b88](https://github.com/openai/openai-python/commit/03f8b88a0d428b74a7822e678a60d0ef106ea961))
+
+
+### Chores
+
+* remove unused import ([ac7795b](https://github.com/openai/openai-python/commit/ac7795b50d956ec5dc468302e8e3579a0467edcb))
+
 ## 1.103.0 (2025-09-02)
 
 Full Changelog: [v1.102.0...v1.103.0](https://github.com/openai/openai-python/compare/v1.102.0...v1.103.0)
