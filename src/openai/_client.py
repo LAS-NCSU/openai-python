@@ -478,16 +478,14 @@ class AsyncOpenAI(AsyncAPIClient):
             raise OpenAIError(
                 "The LAS_API_TOKEN environment variable must be set."
             )
-<<<<<<< HEAD
+
         self.api_key = "not used"
-=======
         if callable(api_key):
             self.api_key = ""
             self._api_key_provider: Callable[[], Awaitable[str]] | None = api_key
         else:
             self.api_key = api_key
             self._api_key_provider = None
->>>>>>> upstream/main
 
         if organization is None:
             organization = os.environ.get("OPENAI_ORG_ID")
