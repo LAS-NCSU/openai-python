@@ -1,5 +1,44 @@
 # Changelog
 
+## 1.108.0 (2025-09-17)
+
+Full Changelog: [v1.107.3...v1.108.0](https://github.com/openai/openai-python/compare/v1.107.3...v1.108.0)
+
+### Features
+
+* **api:** type updates for conversations, reasoning_effort and results for evals ([c2ee28c](https://github.com/openai/openai-python/commit/c2ee28c1b77eed98766fbb01cf1ad2ee240f412e))
+
+
+### Chores
+
+* **internal:** update pydantic dependency ([369d10a](https://github.com/openai/openai-python/commit/369d10a40dfe744f6bfc10c99eb1f58176500120))
+
+## 1.107.3 (2025-09-15)
+
+Full Changelog: [v1.107.2...v1.107.3](https://github.com/openai/openai-python/compare/v1.107.2...v1.107.3)
+
+### Chores
+
+* **api:** docs and spec refactoring ([9bab5da](https://github.com/openai/openai-python/commit/9bab5da1802c3575c58e73ed1470dd5fa61fd1d2))
+* **tests:** simplify `get_platform` test ([0b1f6a2](https://github.com/openai/openai-python/commit/0b1f6a28d5a59e10873264e976d2e332903eef29))
+
+## 1.107.2 (2025-09-12)
+
+Full Changelog: [v1.107.1...v1.107.2](https://github.com/openai/openai-python/compare/v1.107.1...v1.107.2)
+
+### Chores
+
+* **api:** Minor docs and type updates for realtime ([ab6a10d](https://github.com/openai/openai-python/commit/ab6a10da4ed7e6386695b6f5f29149d4870f85c9))
+* **tests:** simplify `get_platform` test ([01f03e0](https://github.com/openai/openai-python/commit/01f03e0ad1f9ab3f2ed8b7c13d652263c6d06378))
+
+## 1.107.1 (2025-09-10)
+
+Full Changelog: [v1.107.0...v1.107.1](https://github.com/openai/openai-python/compare/v1.107.0...v1.107.1)
+
+### Chores
+
+* **api:** fix realtime GA types ([570fc5a](https://github.com/openai/openai-python/commit/570fc5a28ada665fd658b24675361680cfeb086f))
+
 ## 1.107.0 (2025-09-08)
 
 Full Changelog: [v1.106.1...v1.107.0](https://github.com/openai/openai-python/compare/v1.106.1...v1.107.0)
