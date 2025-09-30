@@ -1,5 +1,61 @@
 # Changelog
 
+## 2.0.0 (2025-09-30)
+
+Full Changelog: [v1.109.1...v2.0.0](https://github.com/openai/openai-python/compare/v1.109.1...v2.0.0)
+
+### ⚠ BREAKING CHANGES
+
+* **api:** `ResponseFunctionToolCallOutputItem.output` and `ResponseCustomToolCallOutput.output` now return `string | Array<ResponseInputText | ResponseInputImage | ResponseInputFile>` instead of `string` only. This may break existing callsites that assume `output` is always a string.
+
+### Features
+
+* **api:** Support images and files for function call outputs in responses, BatchUsage ([4105376](https://github.com/openai/openai-python/commit/4105376a60293581371fd5635b805b717d24aa19))
+
+## 1.109.1 (2025-09-24)
+
+Full Changelog: [v1.109.0...v1.109.1](https://github.com/openai/openai-python/compare/v1.109.0...v1.109.1)
+
+### Bug Fixes
+
+* **compat:** compat with `pydantic&lt;2.8.0` when using additional fields ([5d95ecf](https://github.com/openai/openai-python/commit/5d95ecf7abd65f3e4e273be14c80f9b4cd91ffe8))
+
+## 1.109.0 (2025-09-23)
+
+Full Changelog: [v1.108.2...v1.109.0](https://github.com/openai/openai-python/compare/v1.108.2...v1.109.0)
+
+### Features
+
+* **api:** gpt-5-codex ([34502b5](https://github.com/openai/openai-python/commit/34502b5a175f8a10ea8694fcea38fe7308de89ef))
+
+## 1.108.2 (2025-09-22)
+
+Full Changelog: [v1.108.1...v1.108.2](https://github.com/openai/openai-python/compare/v1.108.1...v1.108.2)
+
+### Bug Fixes
+
+* **api:** fix mcp tool name ([fd1c673](https://github.com/openai/openai-python/commit/fd1c673fa8d5581b38c69c37aa4fd1fd251259a2))
+
+
+### Chores
+
+* **api:** openapi updates for conversations ([3224f6f](https://github.com/openai/openai-python/commit/3224f6f9b4221b954a8f63de66bcaab389164ee5))
+* do not install brew dependencies in ./scripts/bootstrap by default ([6764b00](https://github.com/openai/openai-python/commit/6764b00bcb8aeab41e73d2fcaf6c7a18ea9f7909))
+* improve example values ([20b58e1](https://github.com/openai/openai-python/commit/20b58e164f9f28b9fc562968263fa3eacc6f5c7c))
+
+## 1.108.1 (2025-09-19)
+
+Full Changelog: [v1.108.0...v1.108.1](https://github.com/openai/openai-python/compare/v1.108.0...v1.108.1)
+
+### Features
+
+* **api:** add reasoning_text ([18d8e12](https://github.com/openai/openai-python/commit/18d8e12061d1fd4e09d24986ff6e38c5063013e9))
+
+
+### Chores
+
+* **types:** change optional parameter type from NotGiven to Omit ([acc190a](https://github.com/openai/openai-python/commit/acc190a29526e64db6074e7f21aca800423c128c))
+
 ## 1.108.0 (2025-09-17)
 
 Full Changelog: [v1.107.3...v1.108.0](https://github.com/openai/openai-python/compare/v1.107.3...v1.108.0)
