@@ -1,3 +1,8 @@
+# Archived!
+With the proxy server now in place, users should use the normal openai Python package.
+
+More details available on the Large Language Models(LLMs) page on Confluence.
+
 # LAS-NCSU fork of OpenAI Python API Library
 LAS has created this forked version of the OpenAI Python to allow for use within our AWS environment.
 You must install this version using one of the two methods defined. If another library/package depends upon this package, first 
